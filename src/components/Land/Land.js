@@ -1,25 +1,42 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "../page.css";
 
 const Land = () => {
+    const [innerHeight, setInnerHeight] = useState(window.innerHeight);
+    
+    useEffect(() => {
+        function handleResized() {
+            console.log(`resized to ${window.innerHeight}`);
+            setInnerHeight(window.innerHeight);
+        }
+        window.addEventListener('resize',handleResized);
+    })
     return (
         <div className="container">
-            <div className="page">
-
-            <h2> Hello I'm Eric.  </h2>
-            <h4> I’m a student at University of North Carolina at Chapel Hill majoring in Computer Science.</h4>
-                <button>FOLLOW</button>
-                <button>CONTACT</button>
+            <div className="page name" style={{height: innerHeight}}>
+                <h1> Seul Eric Kim </h1>
             </div>
 
-            <div className="page">
+            <div className="page biography" style={{height: innerHeight}}>
+                <img className="biography-img" alt="" src="https://i.pinimg.com/originals/29/a4/8c/29a48ccef7ad9d03b0182a63a860112d.jpg"/>
+                <div className="biography-detail">
+                    <h2 className="biography-title"> Hello I'm Eric.  </h2>
+                    <p className="biography-p"> I’m a student at University of North Carolina at Chapel Hill majoring in Computer Science.
+                    I’ve always wanted to learn more about technology since 
+                        I was a kid. I had to take a quick 6 year break between my 
+                        colleges for serving in the US Army.</p>
+                    <div className="biography-social">
+                        <button>FOLLOW</button>
+                        <button>CONTACT</button>
+                    </div>
+                </div>
 
-                I’ve always wanted to learn more about technology since 
-                    I was a kid. I had to take a quick 6 year break between my 
-                    colleges for serving in the US Army.
             </div>
 
-            <div className="page">
+
+
+
+            <div className="page" style={{height: innerHeight}}>
                 Summer of Code @ UNC [June - August 2020]
 
                 This was in the beginning of the pandemic which caused many students to be out of their internship. 
@@ -33,8 +50,7 @@ const Land = () => {
                 Google Firebase, React,
 
             </div>
-
-            <div>
+            <div className="page" style={{height: innerHeight}}>
                 Final project for COMP 426
                 restaurantQR
 

@@ -1,0 +1,10 @@
+.container {
+  /* height: 100vh; */
+  background-color: rgb(160, 241, 214);
+  grid-column: 2 / 14;
+  grid-row: 2/3;
+}
+
+.page {
+  height: 80vh;
+}

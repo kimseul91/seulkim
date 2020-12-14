@@ -14,3 +14,8 @@
   list-style: none;
   display: inline;
 }
+
+a {
+  color: grey !important;
+  background-color: transparent !important;
+}

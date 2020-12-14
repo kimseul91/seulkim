@@ -12,16 +12,34 @@
   background-color: rgba(255, 255, 255, 0.925);
   padding-left: 20%;
   padding-right: 20%;
-  /* border-radius: 2px;
-  border-style: dotted;
-  vertical-align: middle; */
+}
+
+@media (max-width: 1024px) {
+  .page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 .name {
   background-color: black;
   color: white;
-  grid-column: 1/15;
 }
+
+/* @media (max-width: 1024px) {
+  .name {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    background: black;
+    color: white;
+    padding: 20px;
+    transform: translateY(-50%);
+    resize: vertical;
+    overflow: auto;
+  }
+} */
 
 .biography-img {
   width: 15rem;
@@ -32,25 +50,30 @@
   object-position: 20% 00%;
 }
 
-.biography-detail {
+.detail {
   padding-left: 2rem;
 }
 
-.biography-title {
-  /* font-size: 3rem; */
-  /* line-height: 4rem; */
+.soc-img {
+  width: 17rem;
+  height: 15rem;
+  display: block;
+  object-fit: cover;
+  object-position: 0% 00%;
+}
+@media (max-width: 1024px) {
+  .soc-img {
+    width: 5.7rem;
+    height: 5rem;
+    display: block;
+    object-fit: cover;
+    object-position: 0% 00%;
+  }
 }
 
-.biography-p {
-  /* font-size: 1.5rem; */
-  /* line-height: 2rem; */
-}
-
-.biography-social {
-  /* padding: 1rem; */
-}
-
-button {
+button,
+a:link,
+a:visited {
   border-radius: 2px;
   background-color: black;
   border: none;
@@ -61,4 +84,10 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+button:hover,
+button:active,
+a:hover,
+a:active {
+  filter: brightness(200%);
 }

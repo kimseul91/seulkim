@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import "../page.css";
+// import "../page.css";
 
 
 const Blogs = () => {
@@ -15,8 +15,9 @@ const Blogs = () => {
     // console.log("blogs")
     return (
         <div className="container">
-            <div id="home"className="page name" style={{height: innerHeight}}>
+            <div id="home" className="page name" style={{height: innerHeight}}>
                 <h1> Blogs </h1>
+                <a href="/">Home</a>
             </div>
 
         </div>

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import Blogs from "./Blog/Blogs"
+import Blogs from "../Blog/Blogs"
 import "./Nav.css"
 
 const Nav = () => {
@@ -10,11 +10,14 @@ const Nav = () => {
         let element = document.getElementById(target);
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
-
+    function checkHome () {
+        if(document.location.href != "/")
+                        window.location.replace("/");
+    }
     return (
-        <Router>
             <div className="nav">
                 <a href="/" onClick={e => {
+                    checkHome();
                     let about = document.getElementById("home");
                     e.preventDefault();
                     about && about.scrollIntoView({behavior: "smooth", block: "start"});
@@ -32,15 +35,8 @@ const Nav = () => {
                     about && about.scrollIntoView({behavior: "smooth", block: "start"});
                     window.history.pushState("projects","projects", "/projects")
                 }}>Projects</a>
-                <a href="/blog">Blog</a>
+                <a href="/blogs">Blogs</a>
             </div>
-
-            <Switch>
-                <Router path="/blog">
-                    <Blogs />
-                </Router>
-            </Switch>
-        </Router>
 
     );
 };

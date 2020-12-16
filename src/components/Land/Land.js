@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Nav from "../Nav/Nav"
+import Footer from "../Footer/Footer"
 import "../page.css";
 
 const Land = () => {
@@ -84,13 +85,14 @@ const Land = () => {
                         Customers will be able to search the menu using the input box (with autocomplete).
                         </p>
                         <div className="center">
-                            <a href="https://resumedatabase.cs.unc.edu/" className="a-button"> UNC Resume Database</a>
-                            <a href="https://github.com/nikhil-vytla/unc-cs-resume-db" className="a-button"> Github</a>
+                            <a href="https://restaurantqr-73126.web.app/" className="a-button"> restaurantQR</a>
+                            <a href="https://github.com/kimseul91/restaurantQR" className="a-button"> Github</a>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

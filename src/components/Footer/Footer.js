@@ -1,10 +1,14 @@
 import React from 'react';
+import "./Footer.css";
 
 const Footer = () => {
     return (
-        <div className="container1">
+        <div className="container">
             <div className="footer">
-                <h1>Footer is here</h1>
+                <div className="arr">
+                    <div>©</div> 
+                    <div>All rights reserved</div>
+                </div>
             </div>
         </div>
     );

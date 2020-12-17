@@ -35,7 +35,7 @@ const Nav = () => {
                     about && about.scrollIntoView({behavior: "smooth", block: "start"});
                     window.history.pushState("projects","projects", "/projects")
                 }}>Projects</a>
-                <a href="/blogs">Blogs</a>
+                {/* <a href="/blogs">Blogs</a> */}
             </div>
 
     );

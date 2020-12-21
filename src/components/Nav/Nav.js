@@ -11,7 +11,7 @@ const Nav = () => {
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
     function checkHome () {
-        if(document.location.href != "/")
+        if(document.location.href !== "/")
                         window.location.replace("/");
     }
     return (

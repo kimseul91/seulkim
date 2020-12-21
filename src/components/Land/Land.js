@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Nav from "../Nav/Nav"
 import Footer from "../Footer/Footer"
 import "../page.css";
+import "./Land.css";
 
 const Land = () => {
     const [innerHeight, setInnerHeight] = useState(window.innerHeight);
@@ -13,11 +14,34 @@ const Land = () => {
         }
         window.addEventListener('resize',handleResized);
     })
+    
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            const dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                let openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+    
+
+    const showDropdown = (e) => {
+        if(e.target.id !== null) {
+            if(e.target.id ==  "btnFollow")
+                document.getElementById("followDropdown").classList.toggle("show");
+            if(e.target.id == "btnContact")
+                document.getElementById("contactDropdown").classList.toggle("show");
+        }
+    }
+    
     return (
         <>
             <Nav />
             <div className="container">
-                <div id="home"className="page name" style={{height: innerHeight}}>
+                <div id="home" className="page name" style={{height: innerHeight}}>
                     <h1> Seul Eric Kim </h1>
                 </div>
 
@@ -30,13 +54,23 @@ const Land = () => {
                             I was a kid. I had to take a quick 6 year break between my 
                             colleges for serving in the US Army.</p>
                         <div className="biography-social center">
-                            <button>FOLLOW</button>
-                            <button>CONTACT</button>
+                            <button className="dropbtn" id="btnFollow" onClick={showDropdown}>FOLLOW</button>
+                            <button className="dropbtn" id="btnContact" onClick={showDropdown}>CONTACT</button>
+                            <div className="dropdown-content" id="followDropdown">
+                                <a href="https://www.instagram.com/__ekphotos/" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
+                                <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a>
+                            </div>
+                            <div className="dropdown-content" id="contactDropdown">
+                                <a href="https://www.instagram.com/__ekphotos/" target="_blank" rel="noreferrer"><i className="far fa-envelope"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-messenger"></i></a>
+                            </div>
                         </div>
+                        
                     </div>
-
+                    
                 </div>
-
+                
 
 
 
@@ -64,8 +98,8 @@ const Land = () => {
                             Google Firebase, React,
                         </p> */}
                         <div className="center">
-                            <a href="https://resumedatabase.cs.unc.edu/" className="a-button"> UNC Resume Database</a>
-                            <a href="https://github.com/nikhil-vytla/unc-cs-resume-db" className="a-button"> Github</a>
+                            <a href="https://resumedatabase.cs.unc.edu/" target="_blank" rel="noreferrer" className="a-button"> UNC Resume Database</a>
+                            <a href="https://github.com/nikhil-vytla/unc-cs-resume-db" target="_blank" rel="noreferrer" className="a-button"> Github</a>
                         </div>
                     </div>
 
@@ -85,8 +119,8 @@ const Land = () => {
                         Customers will be able to search the menu using the input box (with autocomplete).
                         </p>
                         <div className="center">
-                            <a href="https://restaurantqr-73126.web.app/" className="a-button"> restaurantQR</a>
-                            <a href="https://github.com/kimseul91/restaurantQR" className="a-button"> Github</a>
+                            <a href="https://restaurantqr-73126.web.app/" target="_blank" rel="noreferrer" className="a-button"> restaurantQR</a>
+                            <a href="https://github.com/kimseul91/restaurantQR" target="_blank" rel="noreferrer" className="a-button"> Github</a>
                         </div>
                     </div>
 

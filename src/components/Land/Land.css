@@ -1,0 +1,20 @@
+.dropdown-content {
+  display: none;
+  /* position: absolute; */
+}
+
+.show {
+  display: flex;
+}
+
+.dropdown-content a {
+  /* float: none !important; */
+  flex-direction: column;
+  color: black;
+  padding: 8px 12px !important;
+  text-decoration: none;
+}
+
+#contactDropdown {
+  /* margin-left: 170px; */
+}

@@ -1,10 +1,10 @@
 .dropdown-content {
-  display: none;
+  display: none !important;
   /* position: absolute; */
 }
 
 .show {
-  display: flex;
+  display: flex !important;
 }
 
 .dropdown-content a {

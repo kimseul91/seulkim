@@ -30,9 +30,9 @@ const Land = () => {
 
     const showDropdown = (e) => {
         if(e.target.id !== null) {
-            if(e.target.id ==  "btnFollow")
+            if(e.target.id ===  "btnFollow")
                 document.getElementById("followDropdown").classList.toggle("show");
-            if(e.target.id == "btnContact")
+            if(e.target.id === "btnContact")
                 document.getElementById("contactDropdown").classList.toggle("show");
         }
     }
@@ -42,7 +42,7 @@ const Land = () => {
             <Nav />
             <div className="container">
                 <div id="home" className="page name" style={{height: innerHeight}}>
-                    <h1> Seul Eric Kim </h1>
+                    <h1> Eric Seul Kim </h1>
                 </div>
 
                 <div id="about" className="page biography" style={{height: innerHeight}}>
@@ -58,12 +58,13 @@ const Land = () => {
                             <button className="dropbtn" id="btnContact" onClick={showDropdown}>CONTACT</button>
                             <div className="dropdown-content" id="followDropdown">
                                 <a href="https://www.instagram.com/__ekphotos/" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
-                                <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a>
+                                {/* <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
+                                <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a> */}
+                                <a href="https://www.linkedin.com/in/eric-kim-5161ba13a/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                             </div>
                             <div className="dropdown-content" id="contactDropdown">
-                                <a href="https://www.instagram.com/__ekphotos/" target="_blank" rel="noreferrer"><i className="far fa-envelope"></i></a>
-                                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-messenger"></i></a>
+                                <a href="mailto:kimeric91@gmail.com" target="_blank" rel="noreferrer"><i className="far fa-envelope"></i></a>
+                                {/* <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-messenger"></i></a> */}
                             </div>
                         </div>
                         

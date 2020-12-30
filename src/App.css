@@ -56,7 +56,7 @@ small,
 @media (max-width: 1024px) {
   html {
     font-size: 75%;
-  } /*12px*/
+  }
 
   body {
     background: white;
@@ -107,6 +107,7 @@ small,
     font-size: 0.833rem;
   }
 }
+
 .App {
   display: grid;
   /* grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr; */

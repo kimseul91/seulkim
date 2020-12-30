@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import "../Blog/Blogs.css";
 // import "../page.css";
 
 
@@ -12,12 +13,15 @@ const Blogs = () => {
         }
         window.addEventListener('resize',handleResized);
     })
-    // console.log("blogs")
     return (
         <div className="container">
-            <div id="home" className="page name" style={{height: innerHeight}}>
-                <h1> Blogs </h1>
-                <a href="/">Home</a>
+            <div id="home" className="page name blog-pending" style={{height: innerHeight}}>
+                <div className="pending">
+
+                    <h1> Blogs </h1>
+                    <h2> Currently in the process of making.</h2>
+                    <a href="/">Go back Home</a>
+                </div>
             </div>
 
         </div>

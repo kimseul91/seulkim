@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import Blogs from "../Blog/Blogs"
+import React, {useEffect, useState} from 'react';
+import { Redirect} from "react-router-dom";
 import "./Nav.css"
 
 const Nav = () => {
@@ -11,9 +10,21 @@ const Nav = () => {
     element && element.scrollIntoView({ behavior: "smooth", block: "start" });
     }, []);
     function checkHome () {
-        if(document.location.href != "/")
+        if(document.location.href !== "/")
                         window.location.replace("/");
     }
+
+    const [directToBlog, setDirectToBlog] = useState(null);
+
+    const toBlog = (e) => {
+        e.preventDefault();
+        console.log("in blog");
+        setDirectToBlog(<Redirect to={"/blogs"} />);
+
+    }
+    if(directToBlog) {
+        return directToBlog;
+    } 
     return (
             <div className="nav">
                 <a href="/" onClick={e => {
@@ -35,8 +46,11 @@ const Nav = () => {
                     about && about.scrollIntoView({behavior: "smooth", block: "start"});
                     window.history.pushState("projects","projects", "/projects")
                 }}>Projects</a>
-                <a href="/blogs">Blogs</a>
+                <a href="javascript:void(0)" onClick={toBlog}>Blogs</a>
+
             </div>
+
+
 
     );
 };

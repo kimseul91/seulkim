@@ -1,11 +1,38 @@
-.footer {
-  height: 30vh;
+.container {
   background-color: black;
-  color: white;
 }
 
-.arr {
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.footer {
+  height: 25%;
+  color: white;
+  margin: 1.25rem 1rem;
+}
+
+.copy-right {
+  margin-top: 1rem;
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.navigation {
   display: flex;
-  flex-direction: row;
-  align-self: baseline;
+  flex-direction: column;
+}
+.navigation a:link,
+a:visited {
+  width: 10%;
+  color: white;
+  text-decoration: none;
+  line-height: 2rem;
+  /* background-color: rgb(126, 89, 21); */
+}
+
+.navigation a:hover,
+a:active {
+  color: tomato;
 }

@@ -1,0 +1,16 @@
+.blog-container {
+  padding-top: 25%;
+  /* display: none !important; */
+}
+
+.blog-pending {
+  display: block !important;
+}
+
+.pending {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

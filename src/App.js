@@ -6,17 +6,15 @@ import Blogs from "./components/Blog/Blogs"
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <>
-          <div className="App">
-              <Route exact path="/" component={Land} />
-              <Route exact path="/blogs" component={Blogs} />
-          </div>
-        </>
-      </Switch>
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Land} />
+          <Route exact path="/blogs" component={Blogs} />
+        </Switch>
 
-    </Router>
+      </Router>
+    </div>
 
   );
 }

@@ -1,5 +1,10 @@
 .blog-container {
-  padding-top: 25%;
+  padding-top: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 25%; */
   /* display: none !important; */
 }
 
@@ -11,6 +16,15 @@
   margin: 0;
   position: absolute;
   top: 50%;
+  background-color: wheat;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.CKEditor-input {
+  background-color: wheat;
+  padding: 10px;
+  margin: 5px;
+  height: 50vh;
+  color: black;
 }
